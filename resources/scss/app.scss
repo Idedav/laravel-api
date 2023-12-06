@@ -1,0 +1,171 @@
+@import '~bootstrap/scss/bootstrap';
+
+body{
+    background: linear-gradient(45deg,  #5f2c82, #49a09d);
+    color: white;
+}
+
+header {
+    height: 100px;
+    padding: 0px 20px;
+    background-color: rgba(0,0,0,.6);
+    .logo{
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #49a09d;
+    }
+    button:hover{
+        background-color: #49a09d;
+    }
+}
+
+.main-wrapper {
+    height: calc(100vh - 100px);
+}
+
+aside {
+    width: 200px;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    ul{
+        list-style: none;
+        li{
+            margin: 15px 0px;
+            a{
+                color: white;
+                text-decoration: none;
+                &:hover{
+                    color: #49a09d;
+                }
+            }
+        }
+    }
+}
+
+main{
+    width: calc(100% - 200px);
+    padding: 50px 100px;
+    overflow: auto;
+    margin: 0;
+	font-weight: 100;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        th,
+        td {
+            padding: 15px;
+            background-color: rgba(255,255,255,0.2);
+            color: #fff;
+        }
+
+        th {
+            text-align: left;
+        }
+        thead {
+            th {
+                background-color: #55608f;
+            }
+        }
+        tbody {
+            tr {
+                &:hover {
+                    background-color: rgba(255,255,255,0.3);
+                }
+            }
+        }
+    }
+
+
+
+
+    .custom-input{
+        border: none;
+        outline: none;
+        color: white;
+        background-color: rgba(255, 255, 255, 0);
+        width: 100%;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.aside-active{
+    color: #49a09d;
+}
+
+
+.pagination{
+    .page-item{
+        border-color: black;
+        .page-link{
+            border: none;
+            color: white;
+              background-color:#55608F;
+              &:hover{
+                  background-color: #49a09d;
+              }
+        }
+    }
+    .page-link.active, .active > .page-link{
+        background-color: #49a09d !important;
+    }
+}
+
+
+
+.text-muted{
+    color: white !important;
+}
+
+
+.custom-card{
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+.btn-custom{
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    border: none;
+    color: white;
+    &:hover{
+        background: linear-gradient(45deg,  #5f2c82, #49a09d);
+        color: white;
+    }
+}
+
+.btn-group-custom{
+    background-color:#55608F;
+    .btn-check-custom{
+        background-color: white;
+        border-color:#55608F;
+        color: #55608F;
+        &:hover{
+            background-color: #55608F;
+            color: white;
+        }
+    }
+}
+
+
+
+.badge-custom{
+    background-color: #55608f;
+    color: white;
+    &:hover{
+        background-color: #49a09d;
+    }
+}
+
+.btn-logout{
+    background-color: #49a09d;
+    border: none;
+    &:hover{
+        background-color: #5f2c82;
+        color: white;
+    }
+}
+
