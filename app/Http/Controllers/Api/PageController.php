@@ -10,8 +10,20 @@ class PageController extends Controller
 {
     public function index()
     {
-        $projects = Project::with('technologies', 'type')->paginate(10);
+        $projects = Project::with('technologies', 'type')->paginate(6);
 
         return response()->json($projects);
+    }
+
+    public function projectBySlug($slug)
+    {
+        $project = Project::where('slug', $slug)->with('technologies', 'type')->first();
+        if ($project) {
+            $success = true;
+        } else {
+            $success = false;
+        }
+
+        return response()->json(compact('project', 'success'));
     }
 }
