@@ -45,13 +45,11 @@
             <label for="image" class="form-label">Image:</label>
             <input onchange="imagePreview(event)" type="file" class="form-control" id="image" name="image"
                 value="{{ old('image', $project?->image) }}">
-            @if ($project)
-                <div class="image-container mt-3">
-                    <p>Image Preview:</p>
-                    <img id="image-preview" width="300" height="200" src="{{ asset('storage/' . $project->image) }}"
-                        alt="">
-                </div>
-            @endif
+            <div class="image-container mt-3">
+                <p>Image Preview:</p>
+                <img id="image-preview" width="300" height="200" onerror="this.src='/img/placeholder.png'"
+                    src="{{ asset('storage/' . $project?->image) }}" alt="">
+            </div>
         </div>
         <div class="mb-3">
             <label for="description">Description:</label>
