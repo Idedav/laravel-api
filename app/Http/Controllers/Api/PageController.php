@@ -21,7 +21,7 @@ class PageController extends Controller
         if ($project->image) {
             $project->image = asset('storage/' . $project->image);
         } else {
-            $project->image = asset('storage/uploads/Placeholder.jpg');
+            $project->image = asset('storage/uploads/Placeholder.png');
         }
 
         if ($project) {
