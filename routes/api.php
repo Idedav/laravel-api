@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\LeadController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\PageController;
@@ -20,4 +21,7 @@ use App\Http\Controllers\Api\PageController;
 // });
 
 Route::get('/projects', [PageController::class, 'index']);
+Route::get('/technologies', [PageController::class, 'getTechnologies']);
+Route::get('/types', [PageController::class, 'getTypes']);
 Route::get('/projects/get-project/{slug}', [PageController::class, 'projectBySlug']);
+Route::post('/send-email', [LeadController::class, 'store']);
